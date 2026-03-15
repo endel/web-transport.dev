@@ -73,6 +73,34 @@
             color: var(--accent);
             border: 1px solid rgba(56, 195, 230, 0.3);
             border-radius: 12px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        a.badge:hover {
+            background: rgba(56, 195, 230, 0.22);
+        }
+
+        .story-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-block;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .story-link:hover {
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .story-arrow {
+            display: inline-block;
+            transition: transform 0.25s ease;
+        }
+
+        .story-link:hover .story-arrow {
+            transform: translateX(4px);
         }
 
         /* Demo */
@@ -272,12 +300,16 @@
                 Zero dependencies. Full RFC compliance. Interop tested.
             </p>
 
+            <p style="margin-bottom: 20px;">
+                <a href="https://github.com/endel/quic-zig?tab=readme-ov-file#the-story" class="story-link">See the Story <span class="story-arrow">&rarr;</span></a>
+            </p>
+
             <div class="badges">
-                <span class="badge">RFC 9000 &mdash; QUIC</span>
-                <span class="badge">RFC 9001 &mdash; TLS 1.3</span>
-                <span class="badge">RFC 9002 &mdash; Loss &amp; CC</span>
-                <span class="badge">RFC 9114 &mdash; HTTP/3</span>
-                <span class="badge">WebTransport</span>
+                <a class="badge" href="https://www.rfc-editor.org/rfc/rfc9000">RFC 9000 &mdash; QUIC</a>
+                <a class="badge" href="https://www.rfc-editor.org/rfc/rfc9001">RFC 9001 &mdash; TLS 1.3</a>
+                <a class="badge" href="https://www.rfc-editor.org/rfc/rfc9002">RFC 9002 &mdash; Loss &amp; CC</a>
+                <a class="badge" href="https://www.rfc-editor.org/rfc/rfc9114">RFC 9114 &mdash; HTTP/3</a>
+                <a class="badge" href="https://www.ietf.org/archive/id/draft-ietf-webtrans-http3-09.html">WebTransport</a>
             </div>
         </section>
 
@@ -320,8 +352,7 @@
 
         <footer>
             <a href="https://github.com/endel/quic-zig">GitHub</a>
-            <a href="https://www.rfc-editor.org/rfc/rfc9000">RFC 9000</a>
-            <a href="https://www.rfc-editor.org/rfc/rfc9114">RFC 9114</a>
+            <a href="https://github.com/sponsors/endel">Support the Creator</a>
         </footer>
     </main>
 
