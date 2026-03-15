@@ -297,7 +297,7 @@
 
             <p class="tagline">
                 A pure Zig implementation of QUIC, HTTP/3, and WebTransport.
-                Zero dependencies. Full RFC compliance. Interop tested.
+                Full RFC compliance. Interop tested.
             </p>
 
             <p style="margin-bottom: 20px;">
@@ -319,7 +319,8 @@
                 <button class="reconnect-btn" id="reconnect-btn" onclick="connect()" style="display:none">Reconnect</button>
             </div>
             <p class="subtitle">
-                Your browser is talking to a <strong>quic-zig</strong> WebTransport echo server over HTTP/3.
+                Your browser is talking to a <strong>quic-zig</strong> WebTransport echo server over HTTP/3.<br>
+                <a href="https://github.com/endel/quic-zig/blob/main/apps/wt_echo_server.zig" style="color: var(--accent); text-decoration: none;">View server source &rarr;</a>
             </p>
 
             <div class="status">
@@ -349,6 +350,12 @@
 
             <p class="compat-note" id="compat-note"></p>
         </section>
+
+        <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 32px; line-height: 1.7; max-width: 480px; margin-left: auto; margin-right: auto;">
+            This project is under active development. It passes interop tests with major implementations,
+            but has not yet been battle-tested in production. Feedback, testing, and
+            <a href="https://github.com/endel/quic-zig/issues" style="color: var(--accent); text-decoration: none;">bug reports</a> are welcome.
+        </p>
 
         <footer>
             <a href="https://github.com/endel/quic-zig">GitHub</a>
