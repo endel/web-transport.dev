@@ -442,7 +442,9 @@
             if (!wt) return;
             const msg = document.getElementById('dgram-input').value;
             try {
-                const writer = wt.datagrams.writable.getWriter();
+                // Safari 26.4+ ships createWritable() in place of the writable attribute
+                const writable = wt.datagrams.writable ?? wt.datagrams.createWritable();
+                const writer = writable.getWriter();
                 await writer.write(new TextEncoder().encode(msg));
                 writer.releaseLock();
                 log('dgram', 'sent', '\u2192 ' + msg);
